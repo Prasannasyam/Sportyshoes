@@ -1,0 +1,43 @@
+mysql> use sportyshoes;
+Database changed
+mysql> desc users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| USER_ID  | int          | NO   | PRI | NULL    | auto_increment |
+| PASSWORD | varchar(255) | YES  |     | NULL    |                |
+| NAME     | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.10 sec)
+
+mysql> desc admin;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| ADMIN_ID | int          | NO   | PRI | NULL    | auto_increment |
+| PASSWORD | varchar(255) | YES  |     | NULL    |                |
+| NAME     | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> desc customer_orders;
++--------------+-----------+------+-----+-------------------+-------------------+
+| Field        | Type      | Null | Key | Default           | Extra             |
++--------------+-----------+------+-----+-------------------+-------------------+
+| ORDER_NUMBER | int       | NO   | PRI | NULL              | auto_increment    |
+| DATE         | timestamp | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| BY_USER      | int       | YES  | MUL | NULL              |                   |
+| PRODUCT_ID   | int       | YES  | MUL | NULL              |                   |
++--------------+-----------+------+-----+-------------------+-------------------+
+4 rows in set (0.01 sec)
+
+mysql> desc products;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| PRODUCT_ID   | int          | NO   | PRI | NULL    | auto_increment |
+| MSRP         | int          | YES  |     | NULL    |                |
+| PRODUCT_NAME | varchar(255) | YES  |     | NULL    |                |
+| VENDOR_INFO  | varchar(255) | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
