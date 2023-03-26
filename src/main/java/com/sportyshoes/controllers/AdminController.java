@@ -15,6 +15,7 @@ import com.sportyshoes.services.OrderService;
 import com.sportyshoes.services.UserService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/admin")
 public class AdminController {
 	
