@@ -20,6 +20,7 @@ import com.sportyshoes.models.Product;
 import com.sportyshoes.services.ProductService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/product/")
 public class ProductController {
 	
