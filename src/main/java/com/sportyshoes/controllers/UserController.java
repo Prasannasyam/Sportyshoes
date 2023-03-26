@@ -18,6 +18,7 @@ import com.sportyshoes.services.UserService;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/user")
 public class UserController {
 	
